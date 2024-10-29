@@ -64,7 +64,7 @@ class Firework {
 
     explode() {
         this.exploded = true;
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 100; i++) {
             this.particles.push(new Particle(this.x, this.y));
         }
     }
@@ -72,7 +72,7 @@ class Firework {
     draw() {
         if (!this.exploded) {
             ctx.beginPath();
-            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+            ctx.arc(this.x, this.y, 4, 0, Math.PI * 2);
             ctx.fillStyle = 'white';
             ctx.fill();
         }
@@ -107,7 +107,7 @@ class Particle {
         ctx.save();
         ctx.globalAlpha = this.alpha;
         ctx.beginPath();
-        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+        ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
         ctx.fillStyle = this.color;
         ctx.fill();
         ctx.restore();

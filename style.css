@@ -118,7 +118,21 @@ canvas {
 
 @media (max-width: 768px) {
     .greeting h1 {
-        font-size: 3.5rem;
+        font-size: 4rem;
+    }
+    
+    .greeting h2 {
+        font-size: 2rem;
+    }
+    
+    .name-input h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .greeting h1 {
+        font-size: 3rem;
     }
     
     .greeting h2 {
@@ -128,23 +142,9 @@ canvas {
     .name-input h2 {
         font-size: 1.5rem;
     }
-}
-
-@media (max-width: 480px) {
-    .greeting h1 {
-        font-size: 2.5rem;
-    }
-    
-    .greeting h2 {
-        font-size: 1.5rem;
-    }
-    
-    .name-input h2 {
-        font-size: 1.2rem;
-    }
 
     input, button {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
     }
 }
