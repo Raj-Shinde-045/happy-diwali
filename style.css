@@ -1,0 +1,150 @@
+/* Import Google Fonts at the top of the file */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('img/first.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 90%;
+    max-width: 500px;
+}
+
+.name-input, .greeting {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 3;
+    position: relative;
+}
+
+.name-input h2 {
+    color: #000;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+input {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff5252;
+}
+
+.greeting {
+    color: #fff;
+    display: none; /* Initially hidden, shown after name input */
+}
+
+.greeting h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.greeting h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #ffd700;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 15px rgba(255, 107, 107, 0.8);
+    }
+    to {
+        text-shadow: 0 0 25px rgba(255, 107, 107, 1), 0 0 35px #ff6b6b;
+    }
+}
+
+@media (max-width: 768px) {
+    .greeting h1 {
+        font-size: 3.5rem;
+    }
+    
+    .greeting h2 {
+        font-size: 1.8rem;
+    }
+    
+    .name-input h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .greeting h1 {
+        font-size: 2.5rem;
+    }
+    
+    .greeting h2 {
+        font-size: 1.5rem;
+    }
+    
+    .name-input h2 {
+        font-size: 1.2rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
